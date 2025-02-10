@@ -1982,23 +1982,21 @@ body.is-preload #footer {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	/* margin: auto; */
+
 	margin-top: 10px;
-	/* margin-bottom: 20px; */
 }
 
 .play-btn {
-	position: relative;
+	position: absolute;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-
 	cursor: pointer;
 	box-shadow: none;
 	justify-self: center;
 	align-self: center;
-	margin-top: -150px;
 	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.25) !important;
 }
 
 .play-btn span {
@@ -2099,7 +2097,6 @@ body.is-preload #footer {
 	padding: 10px;
 	background: transparent;
 	border-radius: 4px;
-	/* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .song-item {
