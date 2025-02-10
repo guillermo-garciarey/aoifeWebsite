@@ -13,6 +13,11 @@ const forwardBtn = document.querySelector(".forward-btn");
 const backwardBtn = document.querySelector(".backward-btn");
 
 playBtn.addEventListener("click", () => {
+	if (playBtn.className.includes("pause")) {
+		music.play();
+	} else {
+		music.pause();
+	}
 	playBtn.classList.toggle("pause");
 	disk.classList.toggle("play");
 });
@@ -49,3 +54,53 @@ const formatTime = (time) => {
 	}
 	return `${min} : ${sec}`;
 };
+
+// Seek Bar
+
+let songEnded = false; // Track if song has ended
+
+setInterval(() => {
+	seekBar.value = music.currentTime;
+	currentTime.innerHTML = formatTime(music.currentTime);
+
+	if (Math.floor(music.currentTime) === Math.floor(seekBar.max)) {
+		if (!songEnded) {
+			forwardBtn.click();
+			songEnded = true; // Prevent multiple clicks
+		}
+	} else {
+		songEnded = false; // Reset when a new song starts
+	}
+}, 500);
+
+seekBar.addEventListener("change", () => {
+	music.currentTime = seekBar.value;
+});
+
+const playMusic = () => {
+	music.play();
+	playBtn.classList.remove("pause");
+	disk.classList.add("play");
+};
+
+// Forward and backward button
+
+forwardBtn.addEventListener("click", () => {
+	if (currentMusic >= songs.length - 1) {
+		currentMusic = 0;
+	} else {
+		currentMusic++;
+	}
+	setMusic(currentMusic);
+	playMusic();
+});
+
+backwardBtn.addEventListener("click", () => {
+	if (currentMusic <= 0) {
+		currentMusic = songs.length - 1;
+	} else {
+		currentMusic--;
+	}
+	setMusic(currentMusic);
+	playMusic();
+});
