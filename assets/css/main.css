@@ -1906,7 +1906,8 @@ body.is-preload #footer {
 .disk {
 	position: relative;
 	display: block;
-	margin: 40px;
+	margin-block: 40px;
+
 	width: 180px;
 	height: 180px;
 
