@@ -96,19 +96,23 @@ backwardBtn.addEventListener("click", () => {
 
 // Stop music when closing the section
 
-const musicPlayer = document.querySelector(".music-player"); // Select the music player container
+const musicArticle = document.querySelector("#music");
 
 const observer = new IntersectionObserver(
 	(entries) => {
 		entries.forEach((entry) => {
+			// If the element is not in the viewport (i.e., not visible)
 			if (!entry.isIntersecting) {
-				music.pause(); // Pause music if player is not visible
-				playBtn.classList.remove("pause"); // Reset play button state
-				disk.classList.remove("play"); // Stop animation
+				music.pause(); // Pause the music
+				playBtn.classList.add("pause");
+				disk.classList.remove("play");
 			}
 		});
 	},
-	{ threshold: 0 }
+	{
+		threshold: 0,
+	}
 );
 
-observer.observe(musicPlayer); // Start observing the music player
+// Start observing the #music element
+observer.observe(musicArticle);
