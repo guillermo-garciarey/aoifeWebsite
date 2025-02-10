@@ -41,7 +41,8 @@
 						<li><a href="#services">Services </a></li>
 						<li><a href="#gallery">Gallery</a></li>
 						<li><a href="#contact">Contact</a></li>
-						<li><a href="#elements">Elements</a></li>
+						<li><a href="#music">Music</a></li>
+						<!-- <li><a href="#elements">Elements</a></li> -->
 					</ul>
 				</nav>
 				<ul class="icons">
@@ -64,7 +65,7 @@
 
 			<!-- Main -->
 			<div id="main">
-				<!-- Intro -->
+				<!-- About -->
 				<article id="about">
 					<h2 class="major">About</h2>
 					<span class="image main"
@@ -97,7 +98,7 @@
 					</p>
 				</article>
 
-				<!-- Work -->
+				<!-- Services -->
 				<article id="services">
 					<h2 class="major">Services</h2>
 					<span class="image main"
@@ -122,7 +123,7 @@
 					</p>
 				</article>
 
-				<!-- About -->
+				<!-- Gallery -->
 				<article id="gallery">
 					<h2 class="major">Gallery</h2>
 
@@ -132,52 +133,6 @@
 					</p>
 
 					<!-- Video Cards Wrapper -->
-					<div class="gallery-wrapper">
-						<div class="videogallery">
-							<div class="card">
-								<a
-									href="https://www.youtube.com/watch?v=8KAUP7UuEbQ"
-									target="_blank"
-								>
-									<img
-										class="video-thumbnail"
-										src="images/thumbnail1.png"
-										alt="Video 1"
-									/>
-								</a>
-								<h3>From Now On</h3>
-								<p>The Greatest Showman</p>
-							</div>
-							<div class="card">
-								<a
-									href="https://www.youtube.com/watch?v=video2"
-									target="_blank"
-								>
-									<img
-										class="video-thumbnail"
-										src="images/thumbnail2.png"
-										alt="Video 2"
-									/>
-								</a>
-								<h3>Rodeo Drive</h3>
-								<p>Pretty Woman</p>
-							</div>
-							<div class="card">
-								<a
-									href="https://www.youtube.com/watch?v=video3"
-									target="_blank"
-								>
-									<img
-										class="video-thumbnail"
-										src="images/thumbnail3.png"
-										alt="Video 3"
-									/>
-								</a>
-								<h3>Sweet Transvestite</h3>
-								<p>Rocky Horror</p>
-							</div>
-						</div>
-					</div>
 
 					<p>
 						Each performance has been a unique experience, and I always aim to
@@ -235,6 +190,38 @@
 							</li>
 						</ul>
 					</form>
+				</article>
+
+				<!-- Music -->
+				<article id="music">
+					<h2 class="major">Music</h2>
+
+					<div class="music-player">
+						<h3 class="music-name">Song One</h3>
+						<h4 class="artist-name">Artist</h4>
+						<div class="disk"></div>
+						<div class="song-slider">
+							<input
+								type="range"
+								value="0"
+								class="seek-bar"
+							/>
+							<span class="current-time">00:00</span>
+							<span class="song-duration">00:00</span>
+						</div>
+						<div class="controls">
+							<button class="btn backward-btn">
+								<span class="chevron left"></span>
+							</button>
+							<button class="play-btn pause">
+								<span></span>
+								<span></span>
+							</button>
+							<button class="btn forward-btn">
+								<span class="chevron right"></span>
+							</button>
+						</div>
+					</div>
 				</article>
 
 				<!-- Elements -->
@@ -641,6 +628,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/data.js"></script>
 		<script
 			src="https://kit.fontawesome.com/c7c54647d2.js"
 			crossorigin="anonymous"
