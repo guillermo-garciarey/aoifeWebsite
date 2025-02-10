@@ -2060,6 +2060,19 @@ body.is-preload #footer {
 	box-shadow: none;
 }
 
+.btn:hover,
+.btn:focus,
+.btn:active {
+	background: transparent !important; /* Prevents hover effect */
+	transform: none !important;
+	box-shadow: none !important;
+}
+
+/* Disable hover effects on the chevron span */
+.btn .chevron {
+	pointer-events: none; /* Prevents interaction */
+}
+
 .chevron {
 	width: 10px;
 	height: 10px;
