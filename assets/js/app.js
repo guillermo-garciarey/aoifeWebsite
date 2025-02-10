@@ -57,20 +57,18 @@ const formatTime = (time) => {
 
 // Seek Bar
 
-let songEnded = false; // Track if song has ended
-
 setInterval(() => {
 	seekBar.value = music.currentTime;
 	currentTime.innerHTML = formatTime(music.currentTime);
 
-	if (Math.floor(music.currentTime) === Math.floor(seekBar.max)) {
-		if (!songEnded) {
-			forwardBtn.click();
-			songEnded = true; // Prevent multiple clicks
-		}
-	} else {
-		songEnded = false; // Reset when a new song starts
-	}
+	// if (Math.floor(music.currentTime) === Math.floor(seekBar.max)) {
+	// 	if (!songEnded) {
+	// 		forwardBtn.click();
+	// 		songEnded = true;
+	// 	}
+	// } else {
+	// 	songEnded = false;
+	// }
 }, 500);
 
 seekBar.addEventListener("change", () => {
