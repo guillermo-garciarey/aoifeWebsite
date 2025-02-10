@@ -60,15 +60,6 @@ const formatTime = (time) => {
 setInterval(() => {
 	seekBar.value = music.currentTime;
 	currentTime.innerHTML = formatTime(music.currentTime);
-
-	// if (Math.floor(music.currentTime) === Math.floor(seekBar.max)) {
-	// 	if (!songEnded) {
-	// 		forwardBtn.click();
-	// 		songEnded = true;
-	// 	}
-	// } else {
-	// 	songEnded = false;
-	// }
 }, 500);
 
 seekBar.addEventListener("change", () => {
@@ -102,3 +93,22 @@ backwardBtn.addEventListener("click", () => {
 	setMusic(currentMusic);
 	playMusic();
 });
+
+// Stop music when closing the section
+
+const musicPlayer = document.querySelector(".music-player"); // Select the music player container
+
+const observer = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry) => {
+			if (!entry.isIntersecting) {
+				music.pause(); // Pause music if player is not visible
+				playBtn.classList.remove("pause"); // Reset play button state
+				disk.classList.remove("play"); // Stop animation
+			}
+		});
+	},
+	{ threshold: 0 }
+);
+
+observer.observe(musicPlayer); // Start observing the music player
