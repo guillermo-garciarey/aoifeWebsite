@@ -1843,17 +1843,47 @@ body.is-preload #footer {
 
 /* Music Player */
 
+.buttons-disk {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.music-info {
+	padding-top: 70px;
+	padding-bottom: 20px;
+}
+.disk-name {
+	display: flex;
+	flex-direction: column;
+}
+
+.music-player-disk-info {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 20px;
+}
+
+.music-player-info {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: center;
+	padding-inline: 10px;
+}
+
 .music-player {
 	align-self: center;
 	display: flex;
 	flex: 1;
 	flex-direction: column;
 	width: 100%;
-	height: 550px;
-	border-radius: 20px;
-	/* background: rgba(255, 255, 255, 0.08); */
+	/* height: 550px; */
+	border-radius: 4px;
+
 	background: transparent;
-	padding: 30px;
+	padding-block: 30px;
+	padding-inline: 5px;
 	overflow: hidden;
 	color: rgba(255, 255, 255, 0.75);
 }
@@ -1862,6 +1892,7 @@ body.is-preload #footer {
 .artist-name {
 	text-align: center;
 	text-transform: uppercase;
+	margin: 0;
 }
 
 .music-name {
@@ -1878,11 +1909,11 @@ body.is-preload #footer {
 	margin: 40px auto;
 	width: 180px;
 	height: 180px;
-	border-radius: 50%;
+
 	border-radius: 4px;
 	background-image: url("../../images/profile1.JPG");
 	background-size: cover;
-	box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
 	animation: rotate 20s linear infinite;
 	animation-play-state: paused;
 }
@@ -1900,7 +1931,7 @@ body.is-preload #footer {
 	}
 }
 
-.disk::before {
+/* .disk::before {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -1910,7 +1941,7 @@ body.is-preload #footer {
 	height: 30px;
 	border-radius: 50%;
 	background: rgba(0, 0, 0, 0.5);
-}
+} */
 
 .song-slider {
 	width: 100%;
@@ -1950,18 +1981,23 @@ body.is-preload #footer {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin: auto;
-	margin-top: 20px;
+	/* margin: auto; */
+	margin-top: 10px;
+	/* margin-bottom: 20px; */
 }
 
 .play-btn {
 	position: relative;
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
-	background: rgba(0, 0, 0, 0.25);
+
 	cursor: pointer;
 	box-shadow: none;
+	justify-self: center;
+	align-self: center;
+	margin-top: -150px;
+	z-index: 2;
 }
 
 .play-btn span {
@@ -2021,6 +2057,7 @@ body.is-preload #footer {
 	cursor: pointer;
 	position: relative;
 	box-shadow: none;
+	flex: 1;
 }
 
 .chevron {
