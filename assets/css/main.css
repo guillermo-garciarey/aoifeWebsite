@@ -1847,6 +1847,7 @@ body.is-preload #footer {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 }
 
 .music-info {
@@ -1905,12 +1906,12 @@ body.is-preload #footer {
 .disk {
 	position: relative;
 	display: block;
-	margin: 40px auto;
+	margin: 40px;
 	width: 180px;
 	height: 180px;
 
 	border-radius: 50%;
-	background-image: url("../../images/disk.jpg");
+	background-image: url("../../images/profile1.JPG");
 	background-size: cover;
 	box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
 	animation: rotate 20s linear infinite;
