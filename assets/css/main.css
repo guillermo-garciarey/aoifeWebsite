@@ -2240,3 +2240,68 @@ body.is-preload #footer {
 	color: #777;
 	font-size: 14px;
 }
+
+/* Accordion */
+
+.packages-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-bottom: 2rem;
+}
+
+.package-item {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+	height: 100px;
+	background-image: url("../../images/disk1.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: height 0.5s ease-in-out;
+	cursor: pointer;
+	padding: 10px;
+	align-items: end;
+	justify-content: space-between;
+}
+
+.package-item:nth-child(1) {
+	background-image: url("../../images/disk2.jpg");
+}
+
+.package-item:nth-child(2) {
+	background-image: url("../../images/disk3.jpg");
+}
+
+.expanded {
+	height: 400px;
+}
+
+.package-item .more-info,
+.package-item span {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.package-item.expanded .more-info,
+.package-item.expanded span {
+	opacity: 1;
+	visibility: visible;
+}
+
+.package-item .more-info {
+	background-color: rgba(19, 21, 25, 0.75);
+	width: 30%;
+	justify-self: end;
+}
+
+.package-info {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+}
