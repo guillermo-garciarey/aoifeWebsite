@@ -2489,14 +2489,21 @@ body.is-preload #footer {
 }
 
 .accordion-title {
-	color: rgb(255, 255, 255);
+	color: #ffffff;
+	font-weight: 600;
+	line-height: 1.5;
+
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-size: 1.25rem;
+	/* color: rgb(255, 255, 255);
 	font-size: 1rem;
 	font-weight: 700;
 	letter-spacing: 0.2rem;
 	position: relative;
 	isolation: isolate;
 	display: grid;
-	align-items: center;
+	align-items: center; */
 }
 
 .accordion-content i {
