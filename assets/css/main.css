@@ -839,7 +839,7 @@ ol li {
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 	margin: 0 0 2rem 0;
 	padding-left: 1em;
 }
@@ -2250,6 +2250,7 @@ body.is-preload #footer {
 	border-radius: 4px;
 	overflow: hidden;
 	margin-bottom: 2rem;
+	gap: 10px;
 }
 
 .package-item {
@@ -2258,44 +2259,72 @@ body.is-preload #footer {
 	gap: 10px;
 	width: 100%;
 	height: 100px;
-	background-image: url("../../images/disk1.jpg");
+	background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0) 10%,
+			rgba(0, 0, 0, 0.6) 60%,
+			rgba(0, 0, 0, 0.6) 100%
+		),
+		url("../../images/disk1.jpg");
 	background-size: cover;
 	background-position: center;
 	transition: height 0.5s ease-in-out;
 	cursor: pointer;
 	padding: 10px;
-	align-items: end;
+	/* align-items: end; */
 	justify-content: space-between;
+	border-radius: 4px;
 }
 
 .package-item:nth-child(1) {
-	background-image: url("../../images/disk2.jpg");
+	background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0) 10%,
+			rgba(0, 0, 0, 0.6) 60%,
+			rgba(0, 0, 0, 0.6) 100%
+		),
+		url("../../images/disk2.jpg");
 }
 
 .package-item:nth-child(2) {
-	background-image: url("../../images/disk3.jpg");
+	background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0) 10%,
+			rgba(0, 0, 0, 0.6) 60%,
+			rgba(0, 0, 0, 0.6) 100%
+		),
+		url("../../images/disk3.jpg");
+}
+
+.package-item h2 {
+	margin-top: 25px;
+	padding-inline: 10px;
 }
 
 .expanded {
-	height: 400px;
+	height: 450px;
 }
 
 .package-item .more-info,
-.package-item span {
+.package-item span,
+.package-item ul {
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .package-item.expanded .more-info,
-.package-item.expanded span {
+.package-item.expanded span,
+.package-item.expanded ul {
 	opacity: 1;
 	visibility: visible;
+}
+.package-item.expanded ul {
+	margin-bottom: 1rem;
 }
 
 .package-item .more-info {
 	background-color: rgba(19, 21, 25, 0.75);
-	width: 30%;
+
 	justify-self: end;
 }
 
@@ -2304,4 +2333,6 @@ body.is-preload #footer {
 	flex-direction: column;
 	gap: 10px;
 	padding: 10px;
+	flex: 1;
+	justify-content: end;
 }
