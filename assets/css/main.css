@@ -1250,15 +1250,20 @@ button {
 			rgba(19, 21, 25, 0.5),
 			rgba(19, 21, 25, 0.5)
 		),
-		url("../../images/overlay.png");
+		url("../../images/profile1.JPG");
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	animation: panBackground2 60s linear infinite;
 
-	background-size: auto, 256px 256px;
+	/* background-size: auto, 256px 256px;
 	background-position: center, center;
 	background-repeat: no-repeat, repeat;
-	z-index: 2;
+	z-index: 2; */
 }
 
-@keyframes panBackground {
+/* @keyframes panBackground {
 	0% {
 		background-image: url("../../images/profile2.JPG");
 		background-size: 90%;
@@ -1281,6 +1286,52 @@ button {
 		opacity: 0;
 		background-position: bottom;
 	}
+} */
+
+@keyframes panBackground {
+	0% {
+		background-position: top;
+		background-size: 90%;
+		opacity: 0;
+	}
+	10% {
+		background-size: 90%;
+		opacity: 1;
+	}
+	40% {
+		background-size: 90%;
+		opacity: 1;
+	}
+
+	50% {
+		background-size: 90%;
+		opacity: 0;
+	}
+	100% {
+		background-position: bottom;
+		background-size: 90%;
+		opacity: 0;
+	}
+}
+
+@keyframes panBackground2 {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		background-position: top;
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		background-position: bottom;
+		opacity: 0;
+	}
 }
 
 #bg:after {
@@ -1301,6 +1352,7 @@ button {
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 1;
+	filter: brightness(0.5);
 
 	animation: panBackground 60s linear infinite;
 }
@@ -1351,28 +1403,54 @@ body.is-preload #bg:before {
 	display: block;
 }
 
-@keyframes panBackgroundHorizontal1 {
+@keyframes panBackgroundSmall {
 	0% {
-		background-image: url("../../images/profile2.JPG");
+		background-position-y: top;
 		background-size: 150%;
 		opacity: 0;
-		background-position-y: top;
 	}
 	10% {
-		background-image: url("../../images/profile2.JPG");
 		background-size: 150%;
 		opacity: 1;
 	}
-	90% {
-		background-image: url("../../images/profile2.JPG");
+	40% {
 		background-size: 150%;
 		opacity: 1;
 	}
-	100% {
-		background-image: url("../../images/profile2.JPG");
+
+	50% {
 		background-size: 150%;
 		opacity: 0;
+	}
+	100% {
 		background-position-y: bottom;
+		background-size: 150%;
+		opacity: 0;
+	}
+}
+
+@keyframes panBackgroundSmall2 {
+	0% {
+		opacity: 0;
+		background-size: 310%;
+	}
+	40% {
+		background-position: top;
+		opacity: 0;
+		background-size: 310%;
+	}
+	50% {
+		opacity: 1;
+		background-size: 310%;
+	}
+	90% {
+		opacity: 1;
+		background-size: 310%;
+	}
+	100% {
+		background-position: bottom;
+		opacity: 0;
+		background-size: 310%;
 	}
 }
 
@@ -1387,7 +1465,10 @@ body.is-preload #bg:before {
 		padding: 2rem 1rem;
 	}
 	#bg:after {
-		animation: panBackgroundHorizontal1 40s linear infinite;
+		animation: panBackgroundSmall 50s linear infinite;
+	}
+	#bg:before {
+		animation: panBackgroundSmall2 50s linear infinite;
 	}
 }
 
@@ -1396,7 +1477,10 @@ body.is-preload #bg:before {
 		padding: 1rem;
 	}
 	#bg:after {
-		animation: panBackgroundHorizontal1 30s linear infinite;
+		animation: panBackgroundSmall 30s linear infinite;
+	}
+	#bg:before {
+		animation: panBackgroundSmall2 30s linear infinite;
 	}
 }
 
