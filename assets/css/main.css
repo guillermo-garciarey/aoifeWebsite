@@ -1433,24 +1433,29 @@ body.is-preload #bg:before {
 	0% {
 		opacity: 0;
 		background-size: 310%;
+		background-position-x: 52.5%;
 	}
 	40% {
-		background-position: top;
+		background-position-y: top;
 		opacity: 0;
 		background-size: 310%;
+		background-position-x: 52.5%;
 	}
 	50% {
 		opacity: 1;
 		background-size: 310%;
+		background-position-x: 52.5%;
 	}
 	90% {
 		opacity: 1;
 		background-size: 310%;
+		background-position-x: 52.5%;
 	}
 	100% {
-		background-position: bottom;
+		background-position-y: bottom;
 		opacity: 0;
 		background-size: 310%;
+		background-position-x: 52.5%;
 	}
 }
 
@@ -1465,10 +1470,10 @@ body.is-preload #bg:before {
 		padding: 2rem 1rem;
 	}
 	#bg:after {
-		animation: panBackgroundSmall 50s linear infinite;
+		animation: panBackgroundSmall 55s linear infinite;
 	}
 	#bg:before {
-		animation: panBackgroundSmall2 50s linear infinite;
+		animation: panBackgroundSmall2 55s linear infinite;
 	}
 }
 
@@ -1477,10 +1482,10 @@ body.is-preload #bg:before {
 		padding: 1rem;
 	}
 	#bg:after {
-		animation: panBackgroundSmall 30s linear infinite;
+		animation: panBackgroundSmall 40s linear infinite;
 	}
 	#bg:before {
-		animation: panBackgroundSmall2 30s linear infinite;
+		animation: panBackgroundSmall2 40s linear infinite;
 	}
 }
 
