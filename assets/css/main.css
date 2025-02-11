@@ -2331,6 +2331,7 @@ body.is-preload #footer {
 	position: relative;
 	isolation: isolate;
 	/* flex-basis: calc((var(--_panel-padding) * 3) + var(--_button-size)); */
+	flex-basis: 100px;
 	overflow: hidden;
 	padding: var(--_panel-padding);
 	border-radius: 4px;
@@ -2338,7 +2339,6 @@ body.is-preload #footer {
 	display: flex;
 	flex-direction: column;
 	cursor: pointer;
-	height: 100px;
 }
 
 /* .accordion-title::after {
