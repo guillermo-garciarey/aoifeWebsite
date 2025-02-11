@@ -1265,12 +1265,12 @@ button {
 		opacity: 0.2;
 		background-position: top;
 	}
-	40% {
+	10% {
 		background-image: url("../../images/profile2.JPG");
 		background-size: 90%;
 		opacity: 1;
 	}
-	70% {
+	90% {
 		background-image: url("../../images/profile2.JPG");
 		background-size: 90%;
 		opacity: 1;
@@ -1358,12 +1358,12 @@ body.is-preload #bg:before {
 		opacity: 0;
 		background-position-y: top;
 	}
-	20% {
+	10% {
 		background-image: url("../../images/profile2.JPG");
 		background-size: 150%;
 		opacity: 1;
 	}
-	80% {
+	90% {
 		background-image: url("../../images/profile2.JPG");
 		background-size: 150%;
 		opacity: 1;
@@ -1387,7 +1387,7 @@ body.is-preload #bg:before {
 		padding: 2rem 1rem;
 	}
 	#bg:after {
-		animation: panBackgroundHorizontal1 60s linear infinite;
+		animation: panBackgroundHorizontal1 40s linear infinite;
 	}
 }
 
@@ -1396,7 +1396,7 @@ body.is-preload #bg:before {
 		padding: 1rem;
 	}
 	#bg:after {
-		animation: panBackgroundHorizontal1 60s linear infinite;
+		animation: panBackgroundHorizontal1 30s linear infinite;
 	}
 }
 
