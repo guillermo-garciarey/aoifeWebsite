@@ -2448,8 +2448,8 @@ body.is-preload #footer {
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
-	/* flex-basis: clamp(15rem, 60vh, 35rem); */
-	flex-basis: 600px;
+	flex-basis: clamp(15rem, 60vh, 35rem);
+	/* flex-basis: 600px; */
 }
 
 .accordion-panel:has([aria-expanded="false"]) .accordion-content p {
