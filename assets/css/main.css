@@ -1245,12 +1245,12 @@ button {
 	-webkit-transition-delay: 0.75s;
 	-ms-transition-delay: 0.75s;
 	transition-delay: 0.75s;
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 			to top,
 			rgba(19, 21, 25, 0.5),
 			rgba(19, 21, 25, 0.5)
 		),
-		url("../../images/profile1.JPG");
+		url("../../images/profile1.JPG"); */
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1262,31 +1262,6 @@ button {
 	background-repeat: no-repeat, repeat;
 	z-index: 2; */
 }
-
-/* @keyframes panBackground {
-	0% {
-		background-image: url("../../images/profile2.JPG");
-		background-size: 90%;
-		opacity: 0.2;
-		background-position: top;
-	}
-	10% {
-		background-image: url("../../images/profile2.JPG");
-		background-size: 90%;
-		opacity: 1;
-	}
-	90% {
-		background-image: url("../../images/profile2.JPG");
-		background-size: 90%;
-		opacity: 1;
-	}
-	100% {
-		background-image: url("../../images/profile2.JPG");
-		background-size: 90%;
-		opacity: 0;
-		background-position: bottom;
-	}
-} */
 
 @keyframes panBackground {
 	0% {
@@ -1347,7 +1322,7 @@ button {
 		-ms-filter 0.325s ease-in-out;
 	transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 
-	background-image: url("../../images/profile2.JPG");
+	/* background-image: url("../../images/profile2.JPG"); */
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
