@@ -117,28 +117,6 @@ const observer = new IntersectionObserver(
 // Start observing the #music element
 observer.observe(musicArticle);
 
-// Accordion Stuff
-
-document.addEventListener("DOMContentLoaded", () => {
-	const packageItems = document.querySelectorAll(".package-item");
-
-	packageItems.forEach((item) => {
-		item.addEventListener("click", () => {
-			// Remove "expanded" from any currently expanded item
-			document
-				.querySelectorAll(".package-item.expanded")
-				.forEach((expandedItem) => {
-					if (expandedItem !== item) {
-						expandedItem.classList.remove("expanded");
-					}
-				});
-
-			// Toggle "expanded" on the clicked item
-			item.classList.toggle("expanded");
-		});
-	});
-});
-
 // Accordion
 
 const accordion = document.querySelector(".accordion");

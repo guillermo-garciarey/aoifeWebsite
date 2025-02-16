@@ -1,6 +1,14 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
+:root {
+	--background: #f8f4f0; /* Soft off-white */
+	--text: #3a3a3a; /* Dark grey, not pure black for a softer contrast */
+	--primary: #d4a5a5; /* Rose Quartz - soft, warm pink */
+	--secondary: #b2957a; /* Truffle - muted taupe/beige */
+	--accent: #e0c3b1; /* Delicate peachy nude */
+}
+
 html,
 body,
 div,
